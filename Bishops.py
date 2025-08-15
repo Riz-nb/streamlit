@@ -66,6 +66,20 @@ st.markdown("""
             padding: 8px;
             background: #111;
         }
+        /* 1) Global scale (shrinks everything: logo, fonts, inputs, buttons) */
+        html { zoom: 0.90; }   /* try 0.85 for smaller, 0.95 for larger */
+
+        /* 2) Fallback if a browser ignores zoom: reduce base font + headings */
+        :root { font-size: 14px; }     /* default is ~16px */
+        h1 { font-size: 1.6rem !important; }
+        h2 { font-size: 1.3rem !important; }
+        h3 { font-size: 1.1rem !important; }
+
+        /* 3) Make form controls a bit smaller too */
+        button, input, textarea, select { font-size: 0.9rem !important; }
+
+        /* Optional: slightly smaller panel header */
+        .panel-title { font-size: 16px !important; padding: 6px 8px !important; }
     </style>
 """, unsafe_allow_html=True)
 
