@@ -1,0 +1,8 @@
+streamlit
+evaluate
+bert-score
+pandas
+matplotlib
+python-dotenv
+PyPDF2
+requests
